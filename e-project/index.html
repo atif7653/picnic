@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        h1 {
+            /* font-family: "Dancing Script", cursive; */
+            font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
+           
+        }
+
+
+        /* card */
+
+
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background: #f2f2f2;
+        }
+
+
+        h3 {
+
+            font-size: 30px;
+            margin: 0;
+
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        .gallary {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+            margin: 50px 0;
+            align-items: center;
+        }
+
+
+        .content1 {
+
+            width: 20%;
+            margin: 15px;
+            box-sizing: border-box;
+            float: left;
+            text-align: center;
+            border-radius: 20px;
+            cursor: pointer;
+            padding-top: 10px;
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+            transition: .4s;
+            background: #f2f2f2;
+        }
+
+
+        .content1:hover {
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            transform: translate(0px, -8px);
+
+        }
+
+
+        /* img .content1{
+  height: 200px;
+  width: 200px;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+
+} */
+
+
+        h6 {
+            font-size: 26px;
+            text-align: center;
+            color: #222f3e;
+            margin: 0;
+        }
+
+        p {
+            text-align: center;
+            color: #b2bec3;
+            padding-top: 0 8px;
+        }
+
+        .content1 ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+        }
+
+        .content1 li {
+            padding: 5px;
+        }
+
+        .fa {
+            font-size: 26px;
+            transition: .4s;
+
+        }
+
+        .checked {
+            color: #ff9f43;
+        }
+
+        .fa:hover {
+            transform: scale(1.3);
+            transition: .6s;
+        }
+
+
+        button {
+            text-align: center;
+            font-size: 24px;
+            color: #fff;
+            width: 100%;
+            padding: 15px;
+            border: 0;
+            outline: none;
+            cursor: pointer;
+            margin-top: 5px;
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+
+
+
+
+
+
+        .btn1 {
+
+            width: 25%;
+
+        }
+
+
+        .btn {
+
+            width: 100%;
+
+        }
+
+
+
+
+
+        /* .buy-1{
+  background: #2183a2;
+}
+
+
+.buy-2{
+  background: #4c55c7;
+}
+
+
+
+.buy-3{
+  background:#0b0b0b;
+}
+
+
+
+
+.buy-4{
+  background:#ff9f43;
+} */
+
+
+        @media(max-width:750px) {
+            .content1 {
+                width: 100%;
+            }
+        }
+
+
+
+
+
+        @media(max-width:1000px) {
+            .content1 {
+                width: 45%;
+            }
+        }
+
+
+
+        /* navbar */
+
+
+
+
+        .nav-item a::after {
+            content: '';
+            width: 0%;
+            height: 2px;
+            background: gray;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+
+
+        .nav-item a:hover::after {
+            width: 100%;
+        }
+
+        .carousel-caption h5 {
+            margin-top: 200rem;
+        }
+
+
+        .dice {
+            height: 100px;
+            width: 100px;
+            border-radius: 50px;
+        }
+
+        .navbar-brand {
+            height: 100px;
+            margin-left: 5%;
+            /* letter-spacing: 100PX; */
+            /* padding: 1PX; */
+            /* justify-content: center; */
+        }
+
+        .box {
+            background-color: rgb(0, 0, 0);
+        }
+
+        .container-fluid {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        /* Basic styling */
+        .site-footer {
+            background-color: #333;
+            color: #fff;
+            padding: 50px 0;
+        }
+
+        .site-footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .site-footer h3 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .site-footer p {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #ccc;
+        }
+
+        .footer-section {
+            flex: 1;
+            margin-bottom: 20px;
+        }
+
+        .footer-section.about ul.contact {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .footer-section.about ul.contact li {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .footer-section.links ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .footer-section.links ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section.links ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section.links ul li a:hover {
+            color: #fff;
+        }
+
+        .footer-section.social .social-links {
+            display: flex;
+        }
+
+        .footer-section.social .social-links a {
+            color: #ccc;
+            font-size: 24px;
+            margin-right: 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section.social .social-links a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            background-color: #222;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            font-size: 14px;
+            color: #ccc;
+        }
+    </style>
+
+    <title>PICNIC</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="faizan.css"> -->
+
+    <link rel="stylesheet" type="text/css" href="
+  https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- bootstrap css -->
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <!-- google fonts -->
+
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+CA:wght@100..400&display=swap"
+        rel="stylesheet">
+
+    <!-- font awesome cdn bootstrap -->
+
+    <link rel="stylesheet" type="text/css" href="
+https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+
+
+
+</head>
+
+<body>
+
+
+
+    <!-- Seprate -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+
+
+
+    <header>
+
+
+
+
+        <section></section>
+
+
+        <div class="container-fluid" style="background-color: #1c1c1d;">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <img src="assets/pictures/nav.gif" class="dice" alt="">
+                    <a class="navbar-brand" href="#"></a>
+
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item" style="margin-left: 20px;">
+                                <a class="nav-link active text-light" aria-current="page" href="index.HTML"
+                                    style="font-size: 30px;">Home</a> href link
+
+                            <li class="nav-item" style="margin-left: 20px;">
+                                <a class="nav-link active text-light" aria-current="page" href="man06.html"
+                                    style="font-size: 30px;">Males</a> href link
+                            </li>
+                            <li class="nav-item" style="margin-left: 15px;">
+                                <a class="nav-link active text-light" aria-current="page" href="Women.html"
+                                    style="font-size: 30px;">Females</a>
+                            </li>
+                            <li class="nav-item" style="margin-left: 20px;">
+                                <a class="nav-link active text-light" aria-current="page" href="FAMILY2.html"
+                                    style="font-size: 30px; color: azure;">Family Games</a>
+                            </li>
+                            <li class="nav-item" style="margin-left: 25px;">
+                                <a class="nav-link active text-light" aria-current="page" href="kids3.html"
+                                    style="font-size: 30px;">Kids</a>
+                            </li>
+                        </ul>
+
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+
+
+
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/pictures/Family-Picnic.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5></h5>
+                        <p>.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/pictures/pexels-wildlittlethingsphoto-745045.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5></h5>
+                        <p>.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/pictures/picnic-group-1024x576.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5></h5>
+                        <p>.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </header>
+        <!-- 
+CAROUSEL -->
+
+
+
+
+
+
+
+        <!-- Our Services -->
+
+        <div class="text-center my-5">
+            <h1 data-aos="fade-down-right"> <span class="text-">CATEGORY</h1></span>
+            <hr class="w-25 m-auto ">
+        </div>
+
+
+
+        <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" class="gallary">
+
+            <div class="content1">
+                <img src="assets/pictures/two.jpg" height="200px" width="200px" display="block" text-aligin="center" margin="0 auto">
+                <h1>MALES</h1>
+                <p>Kan jam is a fun party game for adults that can be played with teams of
+                    two. The aim of the game is to throw or deflect a Frisbee into a trash can or bin. </p>
+                <h6></h6>
+                <ul>
+                    <li><i class="fa fa-star checked"></i></li>
+
+                    <li><i class="fa fa-star checked"></i></li>
+
+                    <li><i class="fa fa-star checked"></i></li>
+
+                    <li><i class="fa fa-star checked"></i></li>
+
+                    <li><i class="fa fa-star checked"></i></li>
+
+                </ul>
+                <a href="man06.html" class="btn btn-warning"><b>Check Out</b></a>
+            </div>
+
+
+
+            <div class="content1">
+                <img src="assets/pictures/atif.jpg" height="200px" width="200px" display="block" text-aligin="center" margin="0 auto">
+                <h1>WOMEN</h1>
+                <p> People’s Choice and display competitions: These competitions are untimed, but entries must be
+                    submitted between 5:30-6:00 PM on Monday for judging between 6:00 and 6:30 PM.</p>
+                <h6></h6>
+                <ul>
+                    <li><i class="fa fa-star checked"></i></li>
+
+                    <li><i class="fa fa-star checked"></i></li>
+
+                    <li><i class="fa fa-star checked"></i></li>
+
+                    <li><i class="fa fa-star checked"></i></li>
+
+                    <li><i class="fa fa-star checked"></i></li>
+                </ul>
+
+                <a href="Women.html" class="btn btn-warning"><b>Check Out</b></a>
+            </div>
+
+
+            <div class="content1">
+                <img src="assets/pictures/33.webp" height="200px" width="200px" display="block" text-aligin="center" margin="0 auto">
+                <h1>FAMILY GAMES</h1>
+                <p>This is a favourite and familiar game that can be played over and over again. It’s a great way to
+                    develop
+                    social skills and positive relationships with others.</p>
+                <h6></h6>
+                <ul>
+                    <li><i class="fa fa-star checked"></i></li>
+
+                    <li><i class="fa fa-star checked"></i></li>
+
+                    <li><i class="fa fa-star checked"></i></li>
+
+                    <li><i class="fa fa-star checked"></i></li>
+
+                    <li><i class="fa fa-star checked "></i></li>
+                </ul>
+                <a href="FAMILY2.html" class="btn btn-warning"><b>Check Out</b></a>
+            </div>
+
+
+
+            <div class="content1">
+                <img src="assets/pictures/6.jpg" height="200px" width="200px" display="block" text-aligin="center" margin="0 auto">
+                <h1>KIDS</h1>
+                <p>The sun is setting on the first warm day of the year in Manhattan, and 63-year-old Brooklyn resident
+                    Betty Lewin strips off her coat and steps up to the swinging jump ropes.</p>
+                <h6></h6>
+                <ul>
+                    <li><i class="fa fa-star checked"></i></li>
+
+                    <li><i class="fa fa-star checked"></i></li>
+
+                    <li><i class="fa fa-star checked"></i></li>
+
+                    <li><i class="fa fa-star checked"></i></li>
+
+                    <li><i class="fa fa-star checked"></i></li>
+                </ul>
+
+                <a href="kids3.html" class="btn btn-warning"><b>Check Out</b></a>
+
+
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+        <!-- contact us -->
+
+
+
+
+
+
+        <form name="sign-up-form" action="" method="post" autocomplete="off">
+
+            <section data-aos="fade-down-right" class="contact1 us py-5 bg-light" id="Contact">
+                <div class="container ">
+                    <div class="text-center my-5">
+                        <h1 data-aos="fade-down-right"> Contact <span class="text-warning"> Us </h1></span>
+                        <hr class="w-25 m-auto ">
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-12">
+                            <form class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="first name" class="form-label">Fist Name</label>
+                                    <input type="first name" class="form-control" id="first name"
+                                        placeholder="Enter Your Name ">
+                                    <p class="error username-error"></p>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="last name" class="form-label">Last Name</label>
+                                    <input type="last name" class="form-control" id="last name"
+                                        placeholder="Enter Your last Name ">
+                                    <p class="error last name-error"></p>
+                                </div>
+                                <div class="col-12">
+                                    <label for="mail" class="form-label">E.mail Adress</label>
+                                    <input type="mail" class="form-control" id="mail"
+                                        placeholder="Enter Your E.mail Id ">
+                                    <p class="error Email-Adress-error"></p>
+                                </div>
+                                <div class="col-12">
+                                    <label for="number" class="form-label"> Mobile Number</label>
+                                    <input type="number" class="form-control" id="number"
+                                        placeholder="Enter Your Number">
+                                    <p class="error your number-error"></p>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="inputState" class="form-label">Country</label>
+                                    <select id="inputState" class="form-select">
+                                        <option selected>Choose...</option>
+                                        <option>Pakistan </option>
+                                        <option>India </option>
+                                        <option>Srilanka</option>
+                                        <option>Afganistan </option>
+                                        <option>Australia </option>
+                                        <option>Bangladesh </option>
+                                        <option>UAE </option>
+                                        <option>USA </option>
+                                        <option>Scotland </option>
+
+
+                                    </select>
+                                </div>
+
+
+
+                                <div class="col-md-4">
+                                    <label for="inputState" class="form-label">City</label>
+                                    <select id="inputState" class="form-select">
+                                        <option selected>Choose...</option>
+                                        <option>karachi</option>
+                                        <option>Lahore</option>
+                                        <option>peshawer</option>
+                                        <option>Quetta</option>
+                                        <option>Multan</option>
+                                        <option>islamabad</option>
+                                        <option>Gilgit</option>
+
+
+                                    </select>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                                        <label class="form-check-label" for="gridCheck">
+                                            Check me out
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <a href="thankyou.html" class="btn btn-warning"> <b>Contact Now</b></a>
+                                    <!-- <button type="submit" a href="thankyou.html" class="btn btn-warning">Sign in</button> -->
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-12 m-auto text-center">
+                            <img data-aos="flip-left" src="assets/pictures/nav.gif" height="400px" width="400px"
+                                class="img-fluid img-thumbnail py-5 ">
+                        </div>
+                        <style>
+                            .img-fluid-left {
+                                border-radius: 30%;
+                            }
+                        </style>
+
+
+                    </div>
+                </div>
+
+            </section>
+        </form>
+
+
+
+
+
+
+
+
+  
+
+    <!-- 
+ <section id="Home">Home</section>
+
+<section id="About">About</section>
+
+
+<section id="Team">Team</section>
+
+
+<section id="Contact">Contact</section>  -->
+
+    <script src="script.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+
+
+
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-section about">
+                <h3>About Us</h3>
+                <p></p>
+                <ul class="contact">
+                    <!-- <li><i class="fas fa-map-marker-alt"></i></li> -->
+                    <li><i class="fas fa-envelope"></i>atifmahar0407@gmail.com</li>
+                    <li><i class="fas fa-phone"></i> +923133260456</li>
+                </ul>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.HTML">Home</a></li>
+                    <li><a href="man06.html">MALES</a></li>
+                    <li><a href="Women.html">FEMALES</a></li>
+                    <li><a href="FAMILY2.html">FAMILY GAMES</a></li>
+                    <li><a href="kids3.html">KIDS GAMES</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href=""><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Picnic Games. All rights reserved.</p>
+        </div>
+</body>
+
+</html>
